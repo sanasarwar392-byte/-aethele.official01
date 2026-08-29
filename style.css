@@ -1,0 +1,272 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #5c5145;
+    background: #faf7f1;
+    line-height: 1.7;
+}
+
+/* NAVBAR */
+
+header {
+    height: 85px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #faf7f1;
+    border-bottom: 1px solid #e6ddd0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-family: Georgia, serif;
+    font-size: 27px;
+    letter-spacing: 5px;
+    color: #a58b63;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #66594a;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: #a58b63;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 10%;
+    background:
+        radial-gradient(
+            circle at 80% 30%,
+            #eee2d1,
+            #faf7f1 45%
+        );
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.small-title {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #a58b63;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-family: Georgia, serif;
+    font-weight: normal;
+    font-size: clamp(55px, 8vw, 100px);
+    line-height: 1;
+    color: #655441;
+}
+
+.hero p:not(.small-title) {
+    max-width: 520px;
+    margin: 30px 0;
+    color: #776b5d;
+    font-size: 15px;
+}
+
+.button {
+    display: inline-block;
+    padding: 13px 27px;
+    border: 1px solid #a58b63;
+    color: #655441;
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    background: #a58b63;
+    color: white;
+}
+
+
+/* COLLECTION */
+
+.collection {
+    padding: 110px 9%;
+}
+
+.collection h2,
+.about h2,
+.contact h2 {
+    font-family: Georgia, serif;
+    font-size: 55px;
+    font-weight: normal;
+    color: #655441;
+}
+
+.section-text {
+    margin-top: 15px;
+    color: #807467;
+}
+
+.dress-container {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.dress-card {
+    background: #fffdf9;
+    border: 1px solid #e7ded2;
+    padding: 15px;
+}
+
+.dress-image {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+        145deg,
+        #eee4d7,
+        #faf7f1
+    );
+    color: #aa9474;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.dress-card h3 {
+    font-family: Georgia, serif;
+    font-size: 28px;
+    font-weight: normal;
+    margin: 18px 5px 3px;
+}
+
+.dress-card p {
+    font-size: 12px;
+    color: #897c6d;
+    margin-left: 5px;
+}
+
+
+/* ABOUT */
+
+.about {
+    padding: 110px 9%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    background: #eee4d7;
+}
+
+.about > p {
+    max-width: 550px;
+    color: #74685a;
+}
+
+
+/* CONTACT */
+
+.contact {
+    padding: 110px 9%;
+    text-align: center;
+}
+
+.contact p {
+    margin-top: 20px;
+    color: #76695b;
+}
+
+.contact a {
+    color: #a58b63;
+    text-decoration: none;
+}
+
+
+/* FOOTER */
+
+footer {
+    padding: 30px 9%;
+    border-top: 1px solid #e5dcd0;
+    display: flex;
+    justify-content: space-between;
+    color: #8b7e70;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 0 5%;
+    }
+
+    nav {
+        gap: 13px;
+    }
+
+    nav a {
+        font-size: 10px;
+    }
+
+    .hero {
+        padding: 70px 7%;
+    }
+
+    .collection,
+    .about,
+    .contact {
+        padding: 75px 7%;
+    }
+
+    .collection h2,
+    .about h2,
+    .contact h2 {
+        font-size: 42px;
+    }
+
+    .dress-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    footer {
+        padding: 25px 7%;
+        flex-direction: column;
+        gap: 8px;
+    }
+}
