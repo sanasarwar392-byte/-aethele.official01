@@ -270,3 +270,23 @@ footer {
         gap: 8px;
     }
 }
+// Product details popup
+
+const viewButtons = document.querySelectorAll(".view-btn");
+
+viewButtons.forEach(function (button) {
+
+    button.addEventListener("click", function () {
+
+        const name = this.getAttribute("data-name");
+        const description = this.getAttribute("data-description");
+
+        alert(
+            name + "\n\n" +
+            description + "\n\n" +
+            "For orders & inquiries: sanarao1703@gmail.com"
+        );
+
+    });
+
+});
